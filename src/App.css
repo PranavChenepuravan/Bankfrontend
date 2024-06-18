@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.back1{
+  background-repeat: no-repeat;
+  background-image: url('./mplant.jpg');
+  height: 50rem;
+  background-size: 100%;
+  align-items: center;
+}
+
+.back2{
+  background-repeat: no-repeat;
+  background-image: url('./frozen.jpg');
+  height: 120rem;
+  background-size: 100%;
+  align-items: center;
+}
+
+.back3{
+  background-repeat: no-repeat;
+  background-image: url('./diamond.jpeg');
+  height: 120rem;
+  background-size: 100%;
+  align-items: center;
+}
