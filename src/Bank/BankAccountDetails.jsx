@@ -10,7 +10,7 @@ export const BankAccountDetails = () => {
     const navigate = useNavigate()
     useEffect(()=>{
         let fetchdata = async() =>{
-            let response =await axios.get(`http://localhost:4000/bank/userdetails/${id}`)
+            let response =await axios.get(`https://bankbackend-gamw.onrender.com/bank/userdetails/${id}`)
             console.log(response.data)
             setData(response.data)
         }
@@ -25,7 +25,7 @@ export const BankAccountDetails = () => {
 
     let handleSubmit=async (event)=>{
       event.preventDefault()
-      let response = axios.put(`http://localhost:4000/bank/userdetails/${id}`,userData)
+      let response = axios.put(`https://bankbackend-gamw.onrender.com/bank/userdetails/${id}`,userData)
       setrefresh(!refresh)
       console.log(response)
       navigate('/bank/accounts')

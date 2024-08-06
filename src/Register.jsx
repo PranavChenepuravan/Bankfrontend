@@ -14,7 +14,7 @@ export const Register = () => {
     event.preventDefault()
 
     if(data.password === data.rpass){
-    let response=await axios.post('http://localhost:4000/people/register',data, data.usertype='person')
+    let response=await axios.post('https://bankbackend-gamw.onrender.com/people/register',data, data.usertype='person')
     console.log(response);
     toast.success('Registered')
     }

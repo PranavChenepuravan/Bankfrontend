@@ -20,7 +20,7 @@ export const Login = () => {
         }
       }
 
-      let response=await axios.post('http://localhost:4000/login',data)
+      let response=await axios.post('https://bankbackend-gamw.onrender.com/login',data)
       console.log(response);
       if(response.data){
         localStorage.setItem('id',response.data.user._id)

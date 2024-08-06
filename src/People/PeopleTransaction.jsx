@@ -25,7 +25,7 @@ export const PeopleTransaction = () => {
 
   useEffect(()=>{
       let fetchData= async() =>{
-          let response =await axios.get(`http://localhost:4000/bank/userdetails/${id}`)
+          let response =await axios.get(`https://bankbackend-gamw.onrender.com/bank/userdetails/${id}`)
           console.log(response.data,'Hai')
           setData(response.data)
       }
@@ -41,9 +41,9 @@ export const PeopleTransaction = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     try{
-      let response=axios.post('http://localhost:4000/people/transction',userData,userData.balance=parseFloat(data.balance)+parseFloat(userData.amount),userData.action='Deposit')
+      let response=axios.post('https://bankbackend-gamw.onrender.com/people/transction',userData,userData.balance=parseFloat(data.balance)+parseFloat(userData.amount),userData.action='Deposit')
       console.log(response);
-      let response1 = axios.put(`http://localhost:4000/bank/userdetails2/${id}`,userData,userData.balance=parseFloat(data.balance)+parseFloat(userData.amount))
+      let response1 = axios.put(`https://bankbackend-gamw.onrender.com/bank/userdetails2/${id}`,userData,userData.balance=parseFloat(data.balance)+parseFloat(userData.amount))
       console.log(response1)
       window.location.reload()
     }
@@ -59,9 +59,9 @@ export const PeopleTransaction = () => {
       console.log(data.balance,'balance')
       console.log(userData.amount,'amount')
       if(parseFloat(data?.balance) >= parseFloat(userData?.amount)){
-        let response=axios.post('http://localhost:4000/people/transction',userData,userData.balance=parseFloat(data.balance)-parseFloat(userData.amount),userData.action='Withdraw')
+        let response=axios.post('https://bankbackend-gamw.onrender.com/people/transction',userData,userData.balance=parseFloat(data.balance)-parseFloat(userData.amount),userData.action='Withdraw')
         console.log(response);
-        let response1 = axios.put(`http://localhost:4000/bank/userdetails2/${id}`,userData,userData.balance=parseFloat(data.balance)-parseFloat(userData.amount))
+        let response1 = axios.put(`https://bankbackend-gamw.onrender.com/bank/userdetails2/${id}`,userData,userData.balance=parseFloat(data.balance)-parseFloat(userData.amount))
         console.log(response1)
         window.location.reload()
       }

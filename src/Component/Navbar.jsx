@@ -15,7 +15,7 @@ export const Navbar = () => {
     console.log(token, 'token received')
     let fetchData = async () => {
       try {
-        let response = await axios.get(`http://localhost:4000/view/${id}`, {
+        let response = await axios.get(`https://bankbackend-gamw.onrender.com/view/${id}`, {
           headers: {
             Authorization: token
           }

@@ -11,7 +11,7 @@ export const PeopleProfile = () => {
     useEffect(() => {
         let fetchData = async () => {
             try {
-                let response = await axios.get(`http://localhost:4000/bank/userdetails/${id}`)
+                let response = await axios.get(`https://bankbackend-gamw.onrender.com/bank/userdetails/${id}`)
                 console.log(response.data)
                 setData(response.data)
             } catch (error) {

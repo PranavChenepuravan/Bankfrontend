@@ -8,7 +8,7 @@ export const BankAccounts = () => {
 
     useEffect(() => {
         let fetchData = async () => {
-            let response = await axios.get('http://localhost:4000/bank/user')
+            let response = await axios.get('https://bankbackend-gamw.onrender.com/bank/user')
             console.log(response.data)
             setData(response.data)
         }

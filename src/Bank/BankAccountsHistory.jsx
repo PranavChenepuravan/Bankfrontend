@@ -10,7 +10,7 @@ export const BankAccountsHistory = () => {
 
     useEffect(()=>{
         let fetchData = async() =>{
-            let response = await axios.get(`http://localhost:4000/people/transdetails/${id}`)
+            let response = await axios.get(`https://bankbackend-gamw.onrender.com/people/transdetails/${id}`)
             console.log(response.data,'hsd')
             setData(response.data)
         }
