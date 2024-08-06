@@ -10,6 +10,6 @@ export const PeopleLayout = () => {
           <Outlet/>
         </div>
     </div>
-  )
+  ) 
 }
 export default PeopleLayout

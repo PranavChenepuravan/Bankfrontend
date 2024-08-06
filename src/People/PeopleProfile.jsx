@@ -33,10 +33,6 @@ export const PeopleProfile = () => {
                     <h2>{data?.accno}</h2>
                 </div>
                 <div className='flex'> 
-                    <div>Place : </div>
-                    <h2>{data?.place}</h2>
-                </div>
-                <div className='flex'> 
                     <div>Phone : </div>
                     <h2>{data?.phone}</h2>
                 </div>
